@@ -5,8 +5,8 @@ pipeline {
         repoUri = "442042522885.dkr.ecr.us-west-2.amazonaws.com/webform"
         repoRegistryUrl = "https://442042522885.dkr.ecr.us-west-2.amazonaws.com"
         registryCreds = 'ecr:us-west-2:awscreds'
-        cluster = "phpwebapp"
-        service = "webapptask-svc"
+        cluster = "webform"
+        service = "webform-svc"
         region = 'us-west-2'
     }
 
@@ -59,21 +59,6 @@ pipeline {
             }
         }
 
-        /*stage('Prune Docker System') {
-            agent {
-                docker {
-                    image 'docker:latest'
-                    args '-v /var/run/docker.sock:/var/run/docker.sock'  // Mount Docker socket
-                }
-            }
-            steps {
-                script {
-                    echo 'Pruning Docker System'
-                    sh 'docker system prune -af --volumes'
-                }
-            }
-        }
-
         stage('Deploy to ECS') {
             agent {
                 docker {
@@ -89,6 +74,6 @@ pipeline {
                     }
                 }
             }
-        }*/
+        }
     }
 }
