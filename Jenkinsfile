@@ -41,7 +41,7 @@ pipeline {
             }
         }
 
-        /*stage('Push Docker Image to ECR') {
+        stage('Push Docker Image to ECR') {
             agent {
                 docker {
                     image 'docker:latest'
@@ -59,7 +59,7 @@ pipeline {
             }
         }
 
-        stage('Prune Docker System') {
+        /*stage('Prune Docker System') {
             agent {
                 docker {
                     image 'docker:latest'
