@@ -24,8 +24,8 @@ pipeline {
                 }
             }
         }
-/*
-        stage('Build Docker Image') {
+
+        /*stage('Build Docker Image') {
             agent {
                 docker {
                     image 'docker:latest'
@@ -74,7 +74,6 @@ pipeline {
                     }
                 }
             }
-        }
+        } */
     }
 }
-*/
