@@ -2,9 +2,9 @@ pipeline {
     agent none  // No global agent, each stage will define its own
     environment {
         DOCKER_CONFIG = '/tmp/.docker'  // Set to a directory with write access
-        repoUri = "992382473894.dkr.ecr.us-east-1.amazonaws.com/webform"
+        repoUri = "992382473894.dkr.ecr.us-east-1.amazonaws.com/jenkins"
         repoRegistryUrl = "https://992382473894.dkr.ecr.us-east-1.amazonaws.com"
-        registryCreds = 'ecr:us-east-1:aws-creds' //aws-creds is ID of the credential created on aws and stored on jenkins
+        registryCreds = 'ecr:us-east-1:jenkins_iam' //aws-creds is ID of the credential created on aws and stored on jenkins
         cluster = "webform"
         service = "webform-svc"
         region = 'us-east-1'
