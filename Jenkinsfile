@@ -40,7 +40,7 @@ pipeline {
                 }
             }
         }
-/*
+
         stage('Push Docker Image to ECR') {
             agent {
                 docker {
@@ -58,7 +58,7 @@ pipeline {
                 }
             }
         }
-
+/*
         stage('Deploy to ECS') {
             agent {
                 docker {
