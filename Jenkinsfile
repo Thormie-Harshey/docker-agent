@@ -5,8 +5,8 @@ pipeline {
         repoUri = "992382473894.dkr.ecr.us-east-1.amazonaws.com/jenkins"
         repoRegistryUrl = "https://992382473894.dkr.ecr.us-east-1.amazonaws.com"
         registryCreds = 'ecr:us-east-1:jenkins_iam' //aws-creds is ID of the credential created on aws and stored on the jenkins server
-        cluster = "webform"
-        service = "webform-svc"
+        cluster = "contactform"
+        service = "contactform-svc"
         region = 'us-east-1'
     }
 
@@ -58,7 +58,7 @@ pipeline {
                 }
             }
         }
-/*
+
         stage('Deploy to ECS') {
             agent {
                 docker {
@@ -74,6 +74,6 @@ pipeline {
                     }
                 }
             }
-        } */
+        } 
     }
 }
