@@ -2,9 +2,9 @@ pipeline {
     agent none  // No global agent, each stage will define its own
     environment {
         DOCKER_CONFIG = '/tmp/.docker'  // Set to a directory with write access
-        repoUri = "992382473894.dkr.ecr.us-east-1.amazonaws.com/jenkins"
+        repoUri = "992382473894.dkr.ecr.us-east-1.amazonaws.com/online-form"
         repoRegistryUrl = "https://992382473894.dkr.ecr.us-east-1.amazonaws.com"
-        registryCreds = 'ecr:us-east-1:jenkins_iam' //aws-creds is ID of the credential created on aws and stored on the jenkins server
+        registryCreds = 'ecr:us-east-1:jenkins_user' //aws-creds is ID of the credential created on aws and stored on the jenkins server
         cluster = "contactform"
         service = "contactform-svc"
         region = 'us-east-1'
@@ -58,7 +58,7 @@ pipeline {
                 }
             }
         }
-
+/*
         stage('Deploy to ECS') {
             agent {
                 docker {
@@ -74,6 +74,6 @@ pipeline {
                     }
                 }
             }
-        } 
+        } */
     }
 }
