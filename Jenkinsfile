@@ -4,7 +4,7 @@ pipeline {
         DOCKER_CONFIG = '/tmp/.docker'  // Set to a directory with write access
         repoUri = "992382473894.dkr.ecr.us-east-1.amazonaws.com/online-form"
         repoRegistryUrl = "https://992382473894.dkr.ecr.us-east-1.amazonaws.com"
-        registryCreds = 'ecr:us-east-1:jenkins' //aws-creds is ID of the credential created on aws and stored on the jenkins server
+        registryCreds = 'ecr:us-east-1:jenkins' //aws-creds is ID of the credential created on aws and stored on jenkins
         cluster = "contactform"
         service = "contactform-svc"
         region = 'us-east-1'
