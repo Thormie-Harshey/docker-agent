@@ -69,7 +69,7 @@ pipeline {
             steps {
                 script {
                     echo "Deploying Image to ECS..."
-                    withAWS(credentials: 'aws-creds', region: "${region}") {
+                    withAWS(credentials: 'jenkins', region: "${region}") {
                         sh 'aws ecs update-service --cluster ${cluster} --service ${service} --force-new-deployment'
                     }
                 }
