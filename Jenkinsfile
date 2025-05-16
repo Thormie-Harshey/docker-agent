@@ -6,7 +6,7 @@ pipeline {
         repoRegistryUrl = "https://992382473894.dkr.ecr.us-east-1.amazonaws.com"
         registryCreds = 'ecr:us-east-1:jenkins' //aws-creds is ID of the credential created on aws and stored on jenkins
         cluster = "onlineform-cluster"
-        service = "contactform-service"
+        service = "onlineform-svc"
         region = 'us-east-1'
     }
 
